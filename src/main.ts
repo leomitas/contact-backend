@@ -21,6 +21,6 @@ async function bootstrap() {
     new ValidationPipe({ whitelist: true }),
     new ValidationPipe({ transform: true, transformOptions: {groups: ['transform']} })
   )
-  await app.listen(3000)
+  await app.listen(process.env.PORT || 3000)
 }
 bootstrap()
